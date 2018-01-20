@@ -1,6 +1,12 @@
 package com.example.budiono.mysunshine;
 
+import android.util.Log;
+
+import com.example.budiono.mysunshine.model.WeatherResponse;
+
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
@@ -13,6 +19,9 @@ public interface WeatherApi {
     String API_KEY = App.getInstance().getApplicationContext().getString(R.string.api_key_weather);
 
     @GET("forecast/daily")
-    Call getDailyForecast(@Query("q") String cityName, @Query("mode") String mode, @Query("units") String unit, @Query("cnt") int countData, @Query("appid") String apiKey);
+    Call <WeatherResponse> getDailyForecast(@Query("q") String cityName, @Query("mode") String mode, @Query("units") String unit, @Query("cnt") int countData, @Query("appid") String apiKey);
+    //pengembalian ke weather response
+    //private static final String TAG = "WeatherController";
+
 
 }
