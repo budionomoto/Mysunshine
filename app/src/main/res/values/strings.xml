@@ -7,4 +7,5 @@
     <string name="ini_contoh_string">Contoh Nya</string>
     <string name="hari_minggu">Minggu</string>
     <string name="cuaca_berawan">Cuaca Berawan</string>
+    <string name="api_key_weather">e7497fe701675d32c6de127e0365bfd2</string>
 </resources>
